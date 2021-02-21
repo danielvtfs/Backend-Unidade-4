@@ -28,7 +28,7 @@ server.post('/todo', async (req, res) => {
     return res.status(400).json({ message: 'Validations Fails' })
   }
   const todo = await ToDoSchema.create(req.body)
-  return res.json(todo);
+  return res.status(201).json(todo);
 });
 
 server.get('/todo', async (req, res) => {
@@ -55,4 +55,4 @@ server.delete('/todo/:id', async (req, res) => {
 })
 
 
-server.listen(3000, () => console.log('Servidor iniciado em http://localhost:3000'))
+server.listen(3333, () => console.log('Servidor iniciado em http://localhost:3333'))
