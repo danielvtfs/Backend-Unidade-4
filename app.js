@@ -54,6 +54,6 @@ server.delete('/todo/:id', async (req, res) => {
   return res.json({ message: 'Successfully deleted' });
 });
 
-server.listen(3333, () =>
-  console.log('Servidor iniciado em http://localhost:3333')
+server.listen(process.env.PORT || 3000, () =>
+  console.log('Servidor iniciado em http://localhost:3000')
 );
